@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>book 객체 배열 만들기.</title>
+    <script>
+    function make(){
+        let book= new Object();
+        book.name;
+        book.author;
+        book.price;
+        return book;
+    }
+    </script>
+
+</head>
+<body>
+    <h1>book 객체 배열 만들기</h1>
+    <hr>
+    <script>
+        let bookArray = new Array();
+        let highest=0;
+        let h_name;
+
+        for(let i=0; i<5;i++){
+            let str = prompt("콤마(,)로 분리하면서 책제목 저자 가격 순으로 입력"); 
+            document.write(str+"<br>");
+            bookArray[i]=make()
+            let property=str.split(",");
+            bookArray[i].name=property[0];
+            bookArray[i].author=property[1];
+            bookArray[i].price=parseInt(property[2]);
+            if(highest<bookArray[i].price) {
+                highest=bookArray[i].price;
+                h_name=bookArray[i].name;
+            }    
+        }
+        document.write("<hr>");
+        document.write("가장 가격이 비싼 책은 " + h_name);
+        let A= new Array(1,2,3);
+    </script>
+</body>
+</html>
