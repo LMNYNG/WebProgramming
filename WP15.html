@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>폼으로 원형 그리기</title>
+<style>
+td {
+text-align: right;
+width: 80px;
+height: 30px;
+}
+</style>
+</head>
+<body>
+<h3>폼으로 원호 그리기</h3>
+<hr>
+<table>
+<tbody>
+    <tr>
+        <td>x</td>
+        <td><input type="text" id="text1" value="100"></td>
+        <td>y</td>
+        <td><input type="text" id="text2" value="100"></td>
+    </tr>
+    <tr>
+        <td>반지름</td>
+        <td><input type="text" id="text3" value="80"></td>
+        <td>방향</td>
+        <td><select id="direc">
+        <option value=''>시계방향</option>
+        <option value="true">반시계방향</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td>시작각도</td>
+        <td><input type="text" id="text4" value="0"></td>
+        <td>끝각도</td>
+        <td><input type="text" id="text5" value="360"></td>
+    </tr>
+    <tr>
+        <td>선굵기</td>
+        <td><input type="text" id="text6" value="1"></td>
+        <td>선색</td>
+        <td><input type="color" id="color" ></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" id="button1" value="그리기" onclick="draw()"></td>
+        <td></td>
+        <td><input type="button" id="button2" value="지우기" onclick="del()"></td>
+    </tr>
+</tbody>
+</table>
+    <canvas id="canvas" width="800" height="500" style="background:skyblue;"></canvas>
+<script>
+let canvas = document.getElementById("canvas");
+let context = canvas.getContext("2d");
+let x, y, rad, direc, start_angle, end_angle, line_width, color, button1, button2;
+function draw() {
+    context.beginPath(); 
+    x = document.getElementById("text1");
+    x = parseInt(x.value);
+    y = document.getElementById("text2");
+    y = parseInt(y.value);
+    rad = document.getElementById("text3");
+    rad = parseInt(rad.value);
+    direc = document.getElementById("direc").value;
+    direc = Boolean(direc);
+    start_angle = document.getElementById("text4");
+    start_angle = (parseInt(start_angle.value))/180*Math.PI;
+    end_angle = document.getElementById("text5");
+    end_angle = (parseInt(end_angle.value))/180*Math.PI;
+    line_width = document.getElementById("text6");
+    line_width = parseInt(line_width.value);
+    color = document.getElementById("color");
+    color=color.value;
+    context.arc(x, y, rad, start_angle, end_angle, direc);
+    context.strokeStyle=color;  
+    context.lineWidth=line_width;
+    context.stroke();
+    }
+function del(){
+    context.clearRect(0, 0, canvas.width, canvas.height);
+}
+</script>
+</body>
+</html>
