@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>학점 매기기</h1>
+    <hr>
+    <button id="button" type="button" onclick="send()">점수 입력</button><br>
+    <input id="result" type="text" size="10">
+    <script>
+        let addWorker = new Worker("./sum.js");
+        let score;
+        
+        function send(){
+            score = prompt("점수를 숫자로 입력하세요");
+            alert(score);
+            addWorker.postMessage(score);
+        }
+
+        addWorker.onmessage=function(e){
+            alert(e.data);
+            document.getElementById("result").value=score+"="+e.data;
+        }
+    </script>  
+</body>
+</html>
