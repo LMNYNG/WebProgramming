@@ -1,0 +1,199 @@
+*{
+    margin:0px;
+    padding:0px;
+    font: normal 400 22px 'Spoqa Han Sans Neo';
+    gap:0px;
+}
+
+#mainwrapper{
+    display:flex;
+}
+body{
+    width:1920px;
+    height:1019px;
+    background:#EBEDEE
+}
+#Menu{
+    display:inline-block;
+    width:341px;
+    height:1019px;
+    background: #313C52;
+    color:#E7E9EC;
+    align-items: center;
+}
+#Menu span{
+    display:flex;
+    align-items: center;
+}
+#Menu img{
+    margin-top:22px;
+}
+#Menu-title{
+    display:flex;
+    width:184px;
+    height:28px;
+    align-items: center;
+    letter-spacing: -0.03em;
+    padding:36px 127px 36px 30px;
+}
+#Menu-dashboard{
+    display:flex;
+    height:68px;
+    gap:47px;
+    padding-left:30px;
+    background:#49546A;
+}
+#Menu-wish{
+    display:flex;
+    height:68px;
+    gap:29.67px;
+    padding-left:30px
+}
+#Menu-control{
+    display:flex;
+    height:68px;
+    gap:38px;
+    padding-left:30px
+}
+#Menu-comment-report{
+    display:flex;
+    height:68px;
+    gap:38px;
+    padding-left:30px
+}
+#Menu-post-report{
+    display:flex;
+    height:68px;
+    gap:31px;
+    padding-left:30px;
+}
+#section{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+#Top{
+    display:flex;
+    box-sizing:border-box;
+    align-items:center;
+    padding-left:36px;
+    display:flex;
+    background:#FFFFFF;
+    width:100%;
+    height:86px;
+    gap:30px;
+}
+#Top-second{
+    display:flex;
+    box-sizing:border-box;
+    height:66px;
+    width:100%;
+    border-width:1px 0px;
+    background:#FFFFFF;
+    border-style:solid;
+    border-color:#D9DBDF;
+    gap:10px;
+    align-items: center;
+}
+#home{
+    color:#2F20D2;
+    padding-left:34px;
+}
+#Main{
+    display:flex;
+    padding: 30px 57px 25px 38px;
+    background: #ebedee;
+}
+#Main-body{
+    width:100%;
+    background: #FFFFFF;
+    border: 2px solid #DFDFE1;
+    border-radius: 10px;
+    height: 812px;
+    text-align:center;
+    background:#FFFFFF;
+}
+#Main-title{
+    display:inline-block;
+    padding-top:35px;
+    height:63px;
+    font-size:50px;
+    font-weight:500;
+    text-align: center;
+}
+#Small-Counter{
+    display:flex;
+    gap:110px;
+    padding-left:318px;
+    padding-top:150px;
+    align-items:center;
+}
+#Small-Counter span{
+    display:flex;
+    border: 1.5px solid #CED0D4;
+    transform: rotate(90deg);
+    width: 68px;
+    height:0px;
+    background:#CED0D4;
+}
+#S-Total1, #S-Total2, #S-Total3{
+    letter-spacing: 0.05em;
+    color: #394252;
+    font-weight: 500;
+    font-size: 26px;
+}
+#S-Count1, #S-Count2, #S-Count3{
+    letter-spacing: -0.03em;
+    padding-top:15px;
+    color: #394252;
+    font-weight: 500;
+    font-size: 18px;
+}
+#Big-Counter{
+    display:flex;
+    gap:100px;
+    padding-left:138px;
+    padding-top:138px;
+    align-items: center;
+}
+#Big-Total, #Big-Day, #Big-Trade{
+    border-radius: 10px;
+    width: 336px;
+    height: 218px;
+    text-align: left;
+    color:white;
+    flex-direction: column;
+}
+#Big-Total div, #Big-Day div, #Big-Trade div{
+    width:100%;
+}
+#Big-Total{
+    background: #2F1FD3;
+    flex-direction: column;
+    display:flex;
+}
+#Big-Day{
+    background: #5197F7;
+    flex-direction: column;
+    display:flex;
+}
+#Big-Trade{
+    background: #EEB442;
+    flex-direction: column;
+    display:flex;
+}
+#Total1, #Total2, #Total3{
+    display:flex;
+    padding:20px 0px 0px 30px;
+    font-size: 18px;
+}
+#Count1, #Count2, #Count3{
+    padding-top:47px;
+    padding-left:80px;
+    display:flex;
+    font-size:30px;
+    align-items:center;
+    letter-spacing:0.05em; 
+    width:100%;
+    height:38px;
+}
