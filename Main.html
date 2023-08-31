@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>서적관리 메인</title>
+    <style>
+        summary:hover,.Anchor:hover{background:lightgray;}
+        div{font:normal bold 60px Arial,Sans-Serif;text-align: center;margin:20px 0px 20px 0px;}
+        table{border-collapse: collapse; text-align: center; width:100%; font:normal bold 25px Arial,Sans-Serif;}
+        .search{text-align: center;font:normal bold 25px Arial,Sans-Serif; }
+        .input{width:700px;height:50px;text-align: center;font:normal bold 25px Arial,Sans-Serif;border:3px solid black; border-radius:10px;}
+        .button{margin-left:25px;width:70px;height:50px;text-align: center;font:normal bold 25px Arial,Sans-Serif;border:3px solid black; border-radius:10px;}
+        html, body {margin:0; padding:0; height:100%;background-color: rgb(228, 208, 207);}
+        header {width:100%;  height:16%; float:left; font:normal bold 60px Arial,Sans-Serif;background:rgb(199, 223, 245);}
+        nav {width:20%;height:84%;float:left; font:normal bold 30px Arial,Sans-Serif; border-right:1px solid black;background:rgb(165, 241, 225);}
+        section {width:78%;height:80%;float:left;}
+        .Vertical{vertical-align: middle; text-align: center;} 
+        .Anchor{vertical-align: middle; text-align: center; padding:30px 0px 30px 0px; margin:0; }
+        a{text-decoration: none; color:black; padding: 40px 0px 40px 0px;}
+        hr{margin:0;}
+        details{margin:40px 0px 40px 0px};
+        
+    </style>
+</head>
+
+<body>
+    <header><p class="Vertical"><a href="./Main.html">서적 관리 홈페이지</a></p></header><hr>
+    <nav>
+        <details>
+            <summary>회원 관리</summary> 
+            <p class="Anchor"><a href="./Register.html">회원 등록</a></p>
+            <p class="Anchor"><a href="./Withdraw.html">회원 삭제</a></p>
+        </details>
+        <details>
+            <summary>책 관리</summary> 
+            <p class="Anchor"><a href="./BookRegister.html">책 등록</a></p>
+            <p class="Anchor"><a href="./BookDelete.html">책 삭제</a></p>
+            <p class="Anchor"><a href="./BookLend.html">책 대출</a></p>
+            <p class="Anchor"><a href="./BookReturn.html">책 반납</a></p>
+        </details>
+        <details>
+            <summary>연체료 관리</summary> 
+            <p class="Anchor"><a href="./LatefeeCheck.html">연체료 확인</a></p>
+            <p class="Anchor"><a href="./LatefeePayment.html">연체료 납부</a></p>
+        </details>
+    </nav>
+    <section>
+        <form name="namesearch" method="get">
+            <p class="search">책 이름으로 검색: <input class="input" type="text" size="50" value=""><input class="button" type="submit" style='cursor:pointer;' value="검색"></p>
+        </form>
+
+        <form name="idsearch" method="get">
+            <p class="search">책 아이디로 검색: <input class="input" type="text" size="50" value=""><input class="button"type="submit" style='cursor:pointer;' value="검색"></p></p>
+        </form>
+        <table>
+            <thead>
+                <tr><th>BID</th><th>Bname</th><th>Category</th><th>Author</th><th>Publisher</th></tr>
+            </thead>
+            <tbody>
+                <tr></tr>
+                </tr>
+            </tbody>
+        </table>
+    </section> 
+</body>
+</html>
